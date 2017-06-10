@@ -1,12 +1,9 @@
 ---
-layout: home
+layout: single
 title: Probability 1 Permutation, Combination
+author_profile: true
 permalink: /prob1/
 ---
-
--------------------------------------------------------
-# Probability 1 Permutation, Combination
--------------------------------------------------------
 
 Before we move to probability we need to define what is permutation and combination.
 
