@@ -6,3 +6,5 @@ permalink: /airbnb/
 ---
 
 # Airbnb Kaggle Competition
+
+This is a new thing

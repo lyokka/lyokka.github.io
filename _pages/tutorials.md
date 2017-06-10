@@ -6,3 +6,6 @@ comments: true
 ---
 
 # My tutorials
+
+  - Probability
+    - [permutation & combination](/prob1/)
