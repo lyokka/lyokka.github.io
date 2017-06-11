@@ -25,7 +25,7 @@ Without loss of generality, if we arrange $$ n $$ different objects, there will 
   n (n-1) (n-2) ... 3 \cdot 2 \cdot 1 = n!
 $$
 
-different permutations.
+different ``permutations``. This formula is also known as ``factorial`` of a non-negative integer $$n$$. We also define $$0!=1$$.
 
 ## Permutation with Repetition(Optional)
 ### Example:
