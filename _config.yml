@@ -7,10 +7,10 @@
 
 # Site Settings
 locale                   : "en"
-title                    : "An Honest Data Scientist"
+title                    : "Honest Data Science"
 title_separator          : "-"
 name                     : "Ye Lin"
-description              : "An Honest Data Scientist."
+description              : "Honest Data Science."
 url                      : "https://lyokka.github.io/"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -79,7 +79,7 @@ analytics:
 author:
   name             : "Ye Lin"
   avatar           : "/assets/images/bio-photo.jpg"
-  bio              : "Learning from Data"
+  bio              : "Recently Graduate from NYU, Looking for Jobs!"
   location         : "Brooklyn, New York"
   email            : "yl3449@nyu.edu"
   uri              :
