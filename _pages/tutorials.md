@@ -8,3 +8,4 @@ comments: true
   - Probability
     - [permutation & combination](/prob1/)
     - [binomial & multinomial theorem](/prob2/)
+    - [probability](/prob3/)
