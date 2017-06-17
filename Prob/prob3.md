@@ -121,4 +121,30 @@ where $$n$$ is the number of trails(number of experiments), and $$n_A$$ is the n
 What's the probability that head shows when flipping a coin?
 
 ### Explanation:
-Let's do experiment, flipping coins 2000 times, then counting the number of times that head shows.
+Let's do experiment, flipping coins 10000 times, then counting the number of times that head shows.
+
+![relative_frequency.jpg](/assets/images/prob/prob3/relative_frequency_interp.jpg)
+
+We could find $$P(A)=\lim_{n\to\infty} \frac{n_A}{n}\approx\frac{1}{2}$$.
+
+### Problem of Relative Frequency Definition:
+This definition seems very intuitive, as long as we do enough experiment we could get a probability of the event that we interested in. However,
+- we don't know if $$P(A)=\lim_{n\to\infty} \frac{n_A}{n}$$ will converge to some number, because we can never proof it.
+- more practically, we can never do infinite times experiments, so we can never get the limit.
+
+### Axiomatic Definition:
+This definition is made of 3 part:
+- $$P(A) \ge 0$$ for all $$A \in F$$, where $$A$$ is an event in event space $$F$$.
+- $$P(\Omega)=1$$, where $$\Omega$$ is the sample space.
+- If $$A_1, A_2, ... \in F$$, are pairwise disjoint(e.g. $$A_i \bigcap A_j = \varnothing$$ for all $$i \ne j$$), then $$P(\bigcup_{i=1}^{\infty}A_i) = P(A_1) + P(A_2) + ... = \sum_{i=1}^{\infty} P(A_i)$$
+
+**This is the definition which can basically satisfied and explained everything,  however the axiomatic definition of probability will still cause a lot arguments nowadays, but that's how we define probability in most cases.**
+
+### Connection between These Definitions
+No matter how we define probability of event $$A$$, we don't know if event $$A$$ will happen. While, if we assume all outcomes are equally likely, we can use ``Clasical Definition`` to determine $$P(A)$$; then we can use $$P(A)$$ to deduce some other probability $$P(B)$$ of event $$B$$  by ``Axiomatic Definition``; finally we can also show the link between theory and experiment by ``Relative Frequency Definition``.
+
+## Probability Space
+At last, we introduce what is ``probability space``. Right now, we know we can measure a probability of event $$A$$ as $$P(A)$$, but we know $$A$$ must in event space $$F$$, and $$F$$ must be modeled by $$\sigma-algebra$$ of sample space $$\Omega$$.
+
+### Definition:
+We define $$(\Omega, F, P)$$ is a probability space, where $$\Omega$$ is sample space, $$F$$ is event space, $$P$$ is probability measure, which is function that convert event $$A$$ to a real number from 0 to 1.
