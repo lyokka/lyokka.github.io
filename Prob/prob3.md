@@ -1,6 +1,6 @@
 ---
 layout: splash
-title: Probability 3 Sample Space and Events
+title: Probability 3 Probability
 permalink: /prob3/
 ---
 ## Statistical Experiment
