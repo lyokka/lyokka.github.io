@@ -5,6 +5,7 @@ permalink: /skills/
 ---
 
   - Python
+    - [Python in Linux](/linuxPython/)
   - R
     - [shiny](/shiny/)
   - SQL
