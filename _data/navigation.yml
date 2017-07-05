@@ -6,6 +6,8 @@ main:
     url: /project/
   - title: "Tutorials"
     url: /tutorials/
+  - title: "Skills"
+    url: /skills/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"

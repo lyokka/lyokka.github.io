@@ -50,7 +50,7 @@ Tossing a biased coin 1 time, the probability of outcome is head is $$p$$.
 ``Bernoulli Distribution``:
 
 $$
-p(x) = \left\{
+p_X(x) = \left\{
 \begin{array}{ll}
       1- p & x = 0 \\
       p & x = 1 \\
@@ -58,7 +58,7 @@ p(x) = \left\{
 \end{array}
 \right. \\
 \text{or to be more condense}\\
-p(x) = p^x(1-p)^{(1-x)}, \text{  for  } x \in \{0, 1\}
+p_X(x) = p^x(1-p)^{(1-x)}, \text{  for  } x \in \{0, 1\}
 $$
 
 Here $$X(head) = 1$$, $$X(tail) = 0$$.
@@ -67,13 +67,17 @@ Here $$X(head) = 1$$, $$X(tail) = 0$$.
 probability of head show is $$p$$, which is the only parameter that will influence the shape of distribution.
 ![Bernoulli](/assets/images/prob/prob5/bernoulli_rv.png)
 
+### Validity:
+It is obvious to proof the validity of Bernoulli distribution:
+$$p_X(0) + p_X(1) = p + 1- p = 1$$
+
 ### Geometric Random Variable
 
 ### Example
-Tossing a biased coin till we obtain heads. We assume flips are independent, for example, even though I flipped coins 10 times, all of them are tails, but when I flip the coin again, I still have probability $$p$$ to get a head.
+Tossing a biased coin till we obtain heads, what's the probability that we tossed $$k$$ times? We assume flips are independent, for example, even though I flipped coins 10 times, all of them are tails, but when I flip the coin again, I still have probability $$p$$ to get a head.
 
 ``Geometric Distribution``:
-$$p(x) = (1-p)^{k-1}p$$ where $$k = 1, 2, 3, 4, ...$$
+$$p_X(x) = (1-p)^{k-1}p$$ where $$k = 1, 2, 3, 4, ...$$
 Here, random variable $$X(\text{flip one time}) = 0, X(\text{flip two times}) = 1, X(\text{flip three times}) = 2, ...$$
 ### Explanation:
 Let's calculate the probability that we get a head after tossing 10 times.
@@ -87,3 +91,34 @@ P(\text{flip 10 times}) &= P(\text{1st flip is tail, 2nd flip is tail, 3rd flip 
 
 - paramter $$p$$ is the only parameter that influence the shape of distribution.
 ![Geometric](/assets/images/prob/prob5/geometric_rv.png)
+
+### Validity:
+$$
+\begin{align}
+\sum_{i=1}^{\infty} p_X(i) &= (1-p)^0 p + (1-p)^1 p + (1-p)^2 p + ... + (1-p)^n p + ... \\
+ &= \lim_{n\to\infty}\sum_{k=0}^{n}(1-p)^k p \\
+ &= \lim_{n\to\infty} p((1-p)^0 + (1-p)^1 + (1-p)^2 + ... + (1-p)^n ) \\
+ &= \lim_{n\to\infty} p((1-p)^0 + (1-p)^1 + (1-p)^2 + ... + (1-p)^n ) \\
+ &= \lim_{n\to\infty} p \frac{1-(1-p)^{n+1}}{1-(1-p)} \\
+ &= \lim_{n\to\infty} p \frac{1-(1-p)^{n+1}}{p} \leftarrow \lim_{n\to\infty} (1-p)^{n+1}=0 \\
+ &= 1
+\end{align}
+$$
+
+### Binomial Random Variable
+
+### Example
+Tossing a biased coin $$n$$ times, what's the probability to get $$k$$ times head? We still assume flips are independent.
+
+``Binomial Distribution``:
+$$p_X(x) = \left( \begin{array}{c} n \\ k \end{array} \right) (1-p)^{n-k}p^k$$ where $$k = 1, 2, 3, 4, ...$$
+Here, random variable $$X(\text{no head from n times flipping}) = 0,\\ X(\text{one head from n times flipping}) = 1,\\ X(\text{two heads from n times flipping}) = 2, ...$$
+
+### Explanation:
+Let's calculate the probability that we get 2 heads after tossing 3 times. All possible results are $$\{(T,H,H), (H,T,H), (H,H,T)\}$$. The probability of each possible result is $$(1-p)^2 p$$, totally there are $$\left( \begin{array}{c} 3 \\ 2 \end{array} \right)$$ combinations.
+$$
+\begin{align}
+P(\text{2 heads after tossing 3 times}) &= \left( \begin{array}{c} 3 \\ 2 \end{array} \right) (1-p)^2 p
+\end{align}$$
+
+Not like ``Geometric Distribution``, ``Binomial Distribution`` have finite length, and it's shape depends on $$p, n$$.
