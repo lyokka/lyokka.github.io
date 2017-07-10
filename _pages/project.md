@@ -7,3 +7,4 @@ permalink: /project/
   - [Airbnb](/airbnb/)
   - Uber
   - Yelp
+  - [Casper](/casper/)
